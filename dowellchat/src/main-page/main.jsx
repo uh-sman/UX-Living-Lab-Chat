@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './main.module.css'
-import {Clock} from 'phosphor-react'
+import {Clock} from 'phosphor-react';
 
 export default function MainPage() {
   return (
@@ -18,7 +18,6 @@ export default function MainPage() {
                 <Clock size={32} /> 
             </div>
             </div>
-            
 
         </div>
     </div>

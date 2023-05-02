@@ -1,61 +1,64 @@
-import React from 'react'
-import styles from './product.module.css'
+import React, {useState} from 'react'
+import styles from './product.module.css';
+import {MagnifyingGlass} from 'phosphor-react';
 
 export default function Products() {
+    const [activeChat, setActiveChat] = useState(null);
+
+    function ChatArea({ chatAreaName }) {
+  return (
+    <div>
+      <h2>{chatAreaName}</h2>
+      {/* <p>This is the {chatAreaName} chat area</p> */}
+    </div>
+  );
+}
+
+    function handleClickEvent(ChatArea){
+        setActiveChat(ChatArea);
+    }
+
+    const WorkFlowAI = () => {
+        return(
+            <div className={styles.formContainer}>
+                
+                <form action="" className={styles.form}>
+                    <input  type="search" name="" className={styles.input} placeholder='search'  aria-label="Search"/> <MagnifyingGlass size={32} className={styles.searchIcon} />
+                    {/* <input type="text" /> */}
+                </form>
+            </div>
+        )
+    }
+
   return (
     <div className={styles.container}>
         <div className={styles.productlist}>
-            <div className={styles.product}>
-                <button>Workflow AI  <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button>Workflow AI  <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Wifi QR Code 6 <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> User Experience Live <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button>Social Media Automation  <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Living Lab Scales  <span>4</span></button>
-            </div><div className={styles.product}>
-                <button> Logo Scan <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Living Lab Chat  <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Customer Experience <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Living Lab Admin <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Team Management <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Living Lab Monitoring <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Sales Agent <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Permutation Calculator <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> DoWell CSC  <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button> Secure Repositories <span>4</span></button>
-            </div>
-            <div className={styles.product}>
-                <button>  <span>4</span></button>
-            </div>
-        </div>
+            <ul className={styles.product}>
+                <li onClick={() => handleClickEvent(WorkFlowAI)}>Workflow AI <span>4</span></li>
+                <li className={styles.green} onClick={() => handleClickEvent("chat area one")}> Wifi QR Code  <span>4</span></li>
+                <li className={styles.pink} onClick={() => handleClickEvent("chat area two")}> User Experience Live <span>4</span></li>
+                <li className={styles.green} onClick={() => handleClickEvent("chat area three")}>Social Media Automation</li>
+                <li className={styles.white}> Living Lab Scales  <span>4</span></li>
+                <li className={styles.green}> Logo Scan</li>
+                <li className={styles.pink}> Living Lab Chat  <span>4</span></li>
+                <li className={styles.green}> Customer Experience</li>
+                <li className={styles.pink}> Living Lab Admin</li>
+                <li className={styles.green}> Team Management</li>
+                <li className={styles.pink}> Living Lab Monitoring</li>
+                <li className={styles.green}> Sales Agent</li>
+                <li className={styles.green}> Permutation Calculator</li>
+                <li className={styles.white}> DoWell CSC  <span>4</span></li>
+                <li className={styles.green}> Secure Repositories</li>
+                <li className={styles.green}> Secure Data</li>
+            </ul>
+        </div> 
+
+        <div className={styles.chatArea}>
+      {activeChat && <ChatArea chatAreaName={activeChat} />}
     </div>
-  )
+    <hr className={styles.hr}/>
+    </div>
+                
+
+    )
 }
