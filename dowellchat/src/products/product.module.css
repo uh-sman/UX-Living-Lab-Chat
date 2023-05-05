@@ -51,12 +51,14 @@ h6 {
 :root {
 
     --black: rgb(0, 0, 0);
-    --darkcream: #e1e8f0;
-    --blue: #2469FF;
-    --lightgreen: #61CE70;
-    --pale-pink: #f78da7;
+    --darkcream: #E1E8F0;
+    --blue: #0D6EFD;
+    --lightgreen: #90E7B5;
+    /* --lightgreen: #20c997; */
+    --pale-pink: #FF9898;
     --white: hsl(0, 0%, 100%);
     --forminput: #E9EFF3;
+    --textBlack: #4E4E4E;
 }
 
 body {
@@ -66,9 +68,13 @@ body {
 }
 
 .container{
+    max-width: 100%;
     box-sizing: border-box;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    /* margin-top: 20px */
+
 }
 .productlist{
     min-width: 100vw;
@@ -104,7 +110,10 @@ body {
 .product li span {
     background-color: var(--blue);
     padding: 4px;
-    border-radius: 60%;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .product .green{
@@ -130,8 +139,9 @@ body {
 .formContainer{
     width: 100%;
     box-sizing: border-box;
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box
 }
 
 .form{
@@ -142,23 +152,62 @@ body {
 .form .searchIcon{
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 10%;
     transform: translateY(-50%);
 }
 .form .input{
-    width: 250px;
+    width: 90%;
     background-color: var(--forminput);
     border: none;
     margin-left: 10px;
     border-radius: 10px;
-    padding-left: 50px;
+    padding-left: 70px;
 }
 
 .form .input::placeholder {
-    padding-left: 50px;
+    padding-left: 40px;
 }
 
 .hr{
     /* max-width: 100%; */
     margin-top: 20px;
+}
+
+/* user styles */
+.workflowContainer{
+    max-width: 100%;
+    box-sizing: border-box
+}
+.userContainer{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstUser{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin: 20px 0 0 20px;
+
+}
+
+.active{
+    width: 90%;
+    background-color: var(--forminput);
+}
+.imageContainer img{
+    width: 70px;
+    position: relative;
+}
+
+.usertexts{
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.userMessage{
+    color: var(--textBlack);
+    font-size: 15px
 }

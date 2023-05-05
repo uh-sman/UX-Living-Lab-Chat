@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styles from './product.module.css';
 import {MagnifyingGlass} from 'phosphor-react';
+import firstImage from './images/first.png';
+
 
 export default function Products() {
     const [activeChat, setActiveChat] = useState(null);
@@ -20,13 +22,69 @@ export default function Products() {
 
     const WorkFlowAI = () => {
         return(
+          <div className={styles.workflowContainer}>
             <div className={styles.formContainer}>
-                
                 <form action="" className={styles.form}>
                     <input  type="search" name="" className={styles.input} placeholder='search'  aria-label="Search"/> <MagnifyingGlass size={32} className={styles.searchIcon} />
                     {/* <input type="text" /> */}
                 </form>
             </div>
+
+             <div className={styles.firstUser}>
+                <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>Alex Mason</span></div>
+                  <div className={styles.userMessage}>You: Hello there!</div>
+                </div>
+              </div>
+
+            <div className={styles.userContainer}>
+              <div className={`${styles.firstUser} ${styles.active}`} >
+                <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>John Doe</span></div>
+                  <div className={styles.userMessage}>You: Hello there!</div>
+                </div>
+              </div>
+
+             
+
+              <div className={styles.firstUser}>
+                <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>Alex Mason</span></div>
+                  <div className={styles.userMessage}>You: Hello there!</div>
+                </div>
+              </div>
+
+              <div className={styles.firstUser}>
+                <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>Alex Mason</span></div>
+                  <div className={styles.userMessage}>You: Hello there!</div>
+                </div>
+              </div>
+
+              <div className={styles.firstUser}>
+                <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>Alex Mason</span></div>
+                  <div className={styles.userMessage}>You: Hello there!</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         )
     }
 
