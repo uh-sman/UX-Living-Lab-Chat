@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
 import styles from './product.module.css';
 import {MagnifyingGlass} from 'phosphor-react';
+import {ClipboardText, EnvelopeSimple} from 'phosphor-react';
 import firstImage from './images/first.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExclamation, faTrash } from '@fortawesome/free-solid-svg-icons'
+
 
 
 export default function Products() {
@@ -22,15 +26,19 @@ export default function Products() {
 
     const WorkFlowAI = () => {
         return(
+          
           <div className={styles.workflowContainer}>
-            <div className={styles.formContainer}>
+            
+            <div className={styles.userContainer}>
+
+              <div className={styles.formContainer}>
                 <form action="" className={styles.form}>
                     <input  type="search" name="" className={styles.input} placeholder='search'  aria-label="Search"/> <MagnifyingGlass size={32} className={styles.searchIcon} />
                     {/* <input type="text" /> */}
                 </form>
             </div>
 
-             <div className={styles.firstUser}>
+              <div className={styles.firstUser}>
                 <div className={styles.imageContainer}>
                   <img src={firstImage} alt="UserImages" />
                 </div>
@@ -40,7 +48,6 @@ export default function Products() {
                 </div>
               </div>
 
-            <div className={styles.userContainer}>
               <div className={`${styles.firstUser} ${styles.active}`} >
                 <div className={styles.imageContainer}>
                   <img src={firstImage} alt="UserImages" />
@@ -51,8 +58,6 @@ export default function Products() {
                 </div>
               </div>
 
-             
-
               <div className={styles.firstUser}>
                 <div className={styles.imageContainer}>
                   <img src={firstImage} alt="UserImages" />
@@ -81,9 +86,93 @@ export default function Products() {
                   <div className={styles.userName}> <span>Alex Mason</span></div>
                   <div className={styles.userMessage}>You: Hello there!</div>
                 </div>
+                 <div className={styles.verticalLine}></div>
               </div>
-
             </div>
+
+            <div className={styles.chatContainer}>
+              <div className={styles.chatBox}>
+              <div className={styles.chatHeader}>
+                <div className={styles.firstUser}>
+                <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>Alex Mason</span></div>
+                  <div className={styles.userMessage}>Active Now</div>
+                </div>
+              </div>
+              <div className={styles.iconArea}>
+                <ClipboardText size={32} />
+               <FontAwesomeIcon icon={faExclamation} style={{ margin: '0 15px' }}/>
+               <FontAwesomeIcon icon={faTrash} size='2x1' style={{ margin: '0 15px 0 0' }} />
+                <EnvelopeSimple size={32} />
+              </div>
+              </div>
+              <hr style={{ margin: '20px 0 15px' }}/>
+
+              <div className={styles.messageArea}>
+                <div className={styles.textArea}>
+                  <div className={styles.incomingMessage}>
+                  <div className={styles.messageImage}>
+                     <img src={firstImage} alt="UserImages" />
+                  </div>
+                  <span>incoming message</span>
+                </div>
+                <div className={styles.outgoingMessage} >
+                  <span>out going messages</span>
+                </div>
+
+                <div className={styles.incomingMessage}>
+                  <div className={styles.messageImage}>
+                     <img src={firstImage} alt="UserImages" />
+                  </div>
+                  <span>incoming message</span>
+                </div>
+                <div className={styles.outgoingMessage} >
+                  <span>out going messages</span>
+                </div>
+
+                <div className={styles.incomingMessage}>
+                  <div className={styles.messageImage}>
+                     <img src={firstImage} alt="UserImages" />
+                  </div>
+                  <span>incoming message</span>
+                </div>
+                <div className={styles.outgoingMessage} >
+                  <span>out going messages</span>
+                </div>
+
+                <div className={styles.incomingMessage}>
+                  <div className={styles.messageImage}>
+                     <img src={firstImage} alt="UserImages" />
+                  </div>
+                  <span>incoming message</span>
+                </div>
+                <div className={styles.outgoingMessage} >
+                  <span>out going messages</span>
+                </div>
+
+                <div className={styles.incomingMessage}>
+                  <div className={styles.messageImage}>
+                     <img src={firstImage} alt="UserImages" />
+                  </div>
+                  <span>incoming message</span>
+                </div>
+                <div className={styles.outgoingMessage} >
+                  <span>out going messages</span>
+                </div>
+                </div>
+                
+                <div className={styles.formTextaria}>
+                  <form className={styles.messageForm}>
+                     <textarea  placeholder='Reply in Chat...'></textarea>
+                  </form> 
+                </div>
+              </div>
+            </div>
+            </div>
+
           </div>
         )
     }
@@ -113,7 +202,7 @@ export default function Products() {
 
         <div className={styles.chatArea}>
       {activeChat && <ChatArea chatAreaName={activeChat} />}
-    </div>
+        </div>
     <hr className={styles.hr}/>
     </div>
                 
