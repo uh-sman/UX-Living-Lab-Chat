@@ -74,6 +74,7 @@ body {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     overflow-x: hidden;
+    background-color: #F9FAFB;
     /* margin-top: 20px */
 
 }
@@ -93,8 +94,8 @@ body {
 
 .product li{
     margin:0 15px 10px 0;
-    font-size: 20px;
-    padding: 8px 15px;
+    font-size: 15px;
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
     opacity: 1;
@@ -203,7 +204,7 @@ body {
     background-color: var(--forminput);
 }
 .imageContainer img{
-    width: 70px;
+    width: 40px;
     position: relative;
 }
 
@@ -225,19 +226,25 @@ body {
 }
 
 .productlist::-webkit-scrollbar {
-    background-color: rgb(219 219 219);
-    width: 10px;
+    background-color: rgb(219, 219, 219);
+    margin-left: 30px;
+    /* border-radius: 10px; */
 }
 .productlist ::-webkit-scrollbar-track {
-    height: 10px;
+    width: 10px;
 }
 
 .productlist::-webkit-scrollbar-thumb {
     max-width: 30px;
     background-color: #2469FF;
-    border-radius: 10px;
-    
+    border-radius: 20px;
 }
+
+.aboutUser {
+    display: none;
+}
+
+
 
 @media screen and (min-width: 1200px) {
 
@@ -246,15 +253,45 @@ body {
     }
 
     .workflowContainer{
+        /* min-width: 100vw;
+        min-height: 100vh; */
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .userContainer{
+        height: 500px;
+        overflow-y: scroll; 
+        overflow-x: hidden;
+    }
+    .formContainer {
+        width: 280px;
+
+    }
+
+    .form .input {
+        width: 200px;
+        margin-left: 0;
+        font-size: 15px;
+        padding: 15px 0 15px 0;
+    }
+
+    .userContainer{
+        margin-left: 50px;
+        /* font-size: 15px; */
+    }
+
+    .productlist{
+        margin-left: 50px;
     }
 
     /* chat container */
     .chatContainer {
-        width: 100%;
+        width: 40%;
         display: block;
-        margin-left: 70px;
+        margin-left: 60px;
+        
         }
     
         .chatHeader {
@@ -275,6 +312,18 @@ body {
             flex-direction: column;
             padding:15px;
             overflow-y: scroll;
+        }
+
+        .textArea::-webkit-scrollbar {
+            background-color: rgb(219, 219, 219);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        .textArea::-webkit-scrollbar-thumb {
+            max-height: 10px;
+            background-color: #2469FF;
+            border-radius: 10px;
         }
 
         .incomingMessage{
@@ -330,4 +379,75 @@ body {
             background-color:#2469FF;
             border-radius: 10px;
         }
+
+       
+        .aboutUser{
+            /* width: fit-content; */
+            /* height: 100vh; */
+            margin-left: 90px;
+            display: block;
+            background-color: #E9EFF3;
+            border-radius: 10px;
+        }
+
+        .userProfile{
+            color: #2280D9;
+        }
+
+        .aboutIcons{
+            cursor: pointer;
+        }
+
+    .userInfo{
+        display: flex;
+        /* width: 100%; */
+        flex-direction: row;
+        margin: 15px 0 30px 15px;
+    }
+    .userDetails h3, p{
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    .userDetails p {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .userDetails h3{
+        font-size: 25px;
+        color: #171717;
+        margin-bottom: 20px;
+    }
+
+    .userContact{
+        color: #A7B6C7;
+    }
+
+    .userContact ul{
+        list-style-type: disc;
+    }
+    
+    .userContact ul li::marker {
+        color: #171717;
+    }
+
+    .userContact li{
+        margin-left: 20px;
+        font-size: 15px;
+        /* list-style: none; */
+    }
+
+    .ulList {
+        text-align: left;
+    }
+
+    .contactDetails, .contactIcon{
+        font-size: 20px;
+    }
+
+    .contactDetails{
+        margin-left: 15px;
+    }
+    
 }

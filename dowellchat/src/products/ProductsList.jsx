@@ -3,8 +3,12 @@ import styles from './product.module.css';
 import {MagnifyingGlass} from 'phosphor-react';
 import {ClipboardText, EnvelopeSimple} from 'phosphor-react';
 import firstImage from './images/first.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExclamation, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamation, faTrash, faEllipsis  } from '@fortawesome/free-solid-svg-icons';
+import {faRectangleXmark, faThumbsUp, faEnvelope} from '@fortawesome/free-regular-svg-icons';
+import {faPhoneFlip,  faGlobe, faHouse, faGraduationCap, faBriefcase, faLocationArrow} from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 
@@ -99,13 +103,13 @@ export default function Products() {
                 </div>
                 <div className={styles.usertexts}>
                   <div className={styles.userName}> <span>Alex Mason</span></div>
-                  <div className={styles.userMessage}>Active Now</div>
+                  <div className={styles.userActive}>Active Now</div>
                 </div>
               </div>
               <div className={styles.iconArea}>
                 <ClipboardText size={32} />
-               <FontAwesomeIcon icon={faExclamation} style={{ margin: '0 15px' }}/>
-               <FontAwesomeIcon icon={faTrash} size='2x1' style={{ margin: '0 15px 0 0' }} />
+               <FontAwesomeIcon icon={faExclamation} style={{ margin: '5 15px 0 15PX', fontSize: 22 }}/>
+               <FontAwesomeIcon icon={faTrash} size='2x1' style={{ margin: '5 15px 0 15PX', fontSize: 22 }} />
                 <EnvelopeSimple size={32} />
               </div>
               </div>
@@ -166,13 +170,80 @@ export default function Products() {
                 
                 <div className={styles.formTextaria}>
                   <form className={styles.messageForm}>
-                     <textarea  placeholder='Reply in Chat...'></textarea>
+                     <textarea  placeholder='Reply in Chat...'>
+                     </textarea>
                   </form> 
                 </div>
               </div>
             </div>
             </div>
 
+           
+               <div className={styles.aboutUser}>
+              <div className={styles.userDetails}>
+                <div className={styles.userInfo}>
+                  <div className={styles.imageContainer}>
+                  <img src={firstImage} alt="UserImages" />
+                </div>
+                <div className={styles.usertexts}>
+                  <div className={styles.userName}> <span>Alex Mason</span></div>
+                  <div className={styles.userProfile}><p>View Profile</p></div>
+                </div>
+                 <div className={styles.aboutIcons}>
+                  <FontAwesomeIcon icon={faEllipsis} style={{ margin: '0 35px' }}/>
+                  <FontAwesomeIcon icon={faRectangleXmark} />
+                 </div>
+                </div>
+              <hr />
+              
+              <div className={styles.userContact}>
+                <h3 style={{ marginTop: '20px' }}>About</h3>
+              <p>Added Details</p>
+                <ul className={styles.ulList}>
+                  <li> <span className={styles.contactIcon}> <FontAwesomeIcon icon={faPhoneFlip} />
+                    </span>
+                    <span className={styles.contactDetails}> + Phone Number</span>
+                    </li>
+                    <li> <span className={styles.contactIcon}> <FontAwesomeIcon icon={faEnvelope} />
+                    </span>
+                    <span className={styles.contactDetails}> + Email </span>
+                    </li>
+                    <li> <span className={styles.contactIcon}> <FontAwesomeIcon icon={faGlobe} />
+                    </span>
+                    <span className={styles.contactDetails}> + Website</span>
+                    </li>
+                    <li> <span className={styles.contactIcon}> <FontAwesomeIcon icon={faHouse} />
+                    </span>
+                    <span className={styles.contactDetails}> + Address</span>
+                    </li>
+                </ul>
+              </div>
+
+              <div className={styles.userContact} style={{ marginTop: '70px' }}>
+              <h3>UX Living Lab Profile</h3>
+                <ul className={styles.ulList}>
+                  <li> <span className={styles.contactIcon}>  <FontAwesomeIcon icon={faThumbsUp} />
+                    </span>
+                    <span className={styles.contactDetails}>Liked since Jan 18, 2023</span>
+                    </li>
+                    <li> <span className={styles.contactIcon}> <FontAwesomeIcon icon={faBriefcase} />
+                    </span>
+                    <span className={styles.contactDetails}>Works at Graphic Designer</span>
+                    </li>
+                    <li> <span className={styles.contactIcon}>  <FontAwesomeIcon icon={faGraduationCap} />
+                    </span>
+                    <span className={styles.contactDetails}>Studied at Harvard University, Cambridge</span>
+                    </li>
+                    <li> <span className={styles.contactIcon}> <FontAwesomeIcon icon={faLocationArrow} />
+                    </span>
+                    <span className={styles.contactDetails}> From Cambridge, USA</span>
+                    </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            
+           
           </div>
         )
     }
