@@ -1,16 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
-import MainPage from "./main-page/main";
-import Products from "./products/ProductsList";
-import Navbar from "./navbar/navbar";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Container from "./container";
+import Footer from "./container/Footer";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <MainPage />
-      <Products />
-      <p>Testing</p>
+      <Container />
+      <Footer />
     </div>
   );
 }

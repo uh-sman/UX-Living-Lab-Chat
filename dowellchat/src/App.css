@@ -1,40 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+:root {
+  --header-color: #0d7813;
+  /* --button-color :#00000;
+  --button-color :#90E7B5; */
+  --bg-color: #e9eff3;
+  /* #90E7B5 */
 
-
-.App {
-  text-align: center;
+  --font: "Archivo", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  text-decoration: none;
+  /* list-style: none; */
+  font-family: "Archivo", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body {
+  font-family: "Archivo", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  color: var(--header-color);
+  font-family: "Archivo", sans-serif;
+}
+.button {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  background: var(--bg-color);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 50px;
+  width: 120px;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+}
+.button2 {
+  display: flex;
+  align-items: center;
+  background: var(--bg-color);
+  justify-content: center;
+  height: 50px;
+  width: 90px;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+}
+.button4 {
+  display: flex;
+  align-items: center;
+  background: var(--bg-color);
+  justify-content: center;
+  height: 50px;
+  width: 90px;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+}
+.button3 {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  background: #90e7b5;
+  justify-content: center;
+  height: contain;
+  min-width: contain;
+  padding: 0px 5px;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+}
+.button4 {
+  display: flex;
+  align-items: center;
+  background: #ff9898;
+  justify-content: center;
+  height: 50px;
+  max-width: contain;
+  padding: 0px 5px;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+}
+.image-style {
+  width: 55px;
+  height: 55px;
+  border-radius: 500px;
+}
+.image-styles {
+  width: 35px;
+  height: 35px;
+  border-radius: 500px;
+}
+.cardBody {
+  background-color: var(--bg-color);
+}
+.inputs {
+  border: var(--bg-color);
+  /* align-items: ; */
+
+  background: var(--bg-color);
+}
+.input- {
+  border: 1px solid var(--bg-color);
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 200px) and (max-width: 900px) {
+  .button {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .button2 {
+    width: 100%;
+  }
+  .button4 {
+    display: block;
+  }
+  .button3 {
+    display: block;
+  }
+  .inputs {
+    width: 96%;
   }
 }
