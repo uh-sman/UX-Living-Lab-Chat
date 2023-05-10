@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+:root {
+  --header-color :#0D7813,
+  --button-color :#00000,
+  --button-color :#90E7B5,
+  /* #90E7B5 */
+ 
+  --font: "Archivo", sans-serif,
+}
+* {
+  text-decoration: none;
+   font-family: 'Archivo', sans-serif;
+}
+
+.body{
+  
+   font-family: 'Archivo', sans-serif;
+
+}
+.header{
+  color: var(--header-color);
+ font-family: 'Archivo', sans-serif;
+}
+.button{
+  display: flex;
+  align-items:center;
+background: #E9EFF3;
+justify-content: center;
+height: 50px;
+width: 120px;
+gap: 6px;
+border:none;
+border-radius: 10px;
+}
+.button2{
+  display: flex;
+  align-items:center;
+background: #E9EFF3;
+justify-content: center;
+height: 50px;
+width: 70px;
+gap: 6px;
+border:none;
+border-radius: 10px;
+}
+.button3{
+  display: flex;
+  align-items:center;
+background: #90E7B5;
+justify-content: center;
+height: 50px;
+width: max-content;
+gap: 6px;
+border:none;
+border-radius: 10px;
+}
+.image-style{
+  width: 55px;
+  height: 55px;
+  border-radius: 500px;
+}

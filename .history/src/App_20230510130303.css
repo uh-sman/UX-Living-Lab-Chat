@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+:root {
+  --header-color :#0D7813,
+  --button-color: #abb8c3
+}
+.Header-font {
+  font-family: "Archivo", sans-serif;
+}
+.header{
+  color: var(--header-color);
+ 
+}
