@@ -6,7 +6,7 @@ const Container = () => {
     <div className="container">
       <div className="d-flex justify-content-around my-4">
         <ChatSection />
-        <div className="d-hidden d-md-block" style={{ marginLeft: "2rem" }}>
+        <div className="mr-2 d-hidden d-md-block">
           <DetailsSection />
         </div>
       </div>

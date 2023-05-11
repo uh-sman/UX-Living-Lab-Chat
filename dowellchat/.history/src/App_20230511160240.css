@@ -133,7 +133,29 @@
 #style-3::-webkit-scrollbar-thumb {
   background-color: #000000;
 } */
+.scroll {
+  overflow-x: auto;
+}
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
 
+/*style the track of your scrollbar*/
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*style the thumb of your scrollbar*/
+
+::-webkit-scrollbar-thumb {
+  height: 200px;
+  background: #00ffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #00ffff;
+}
 @media only screen and (min-width: 200px) and (max-width: 900px) {
   .button {
     width: 100%;

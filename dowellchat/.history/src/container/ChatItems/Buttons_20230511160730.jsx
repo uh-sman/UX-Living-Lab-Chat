@@ -9,7 +9,7 @@ const Buttons = () => {
   });
   return (
     <div className="d-flex flex-nowrap">
-      <div className="d-flex flex-nowrap gap-2 scroll text-nowrap py-3">
+      <div className="d-flex flex-nowrap gap-2 scroll text-nowrap">
         <button type="button" className="btn btn-sm btn-success">
           Login
         </button>

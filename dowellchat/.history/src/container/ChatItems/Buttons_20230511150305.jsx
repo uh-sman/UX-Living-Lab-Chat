@@ -1,16 +1,10 @@
 import React from "react";
-import "./button.css";
-import $ from "jquery";
+
 const Buttons = () => {
-  $(document).ready(function () {
-    if (!$.browser.webkit) {
-      $(".wrapper").html("<p>Sorry! Non webkit users. :(</p>");
-    }
-  });
   return (
     <div className="d-flex flex-nowrap">
-      <div className="d-flex flex-nowrap gap-2 scroll text-nowrap py-3">
-        <button type="button" className="btn btn-sm btn-success">
+      <div className="d-flex flex-nowrap gap-2 overflow-x-scroll">
+        <button type="button" className="btn btn-sm btn-success text-nowrap">
           Login
         </button>
         <button type="button" className=" btn btn-sm btn-danger">

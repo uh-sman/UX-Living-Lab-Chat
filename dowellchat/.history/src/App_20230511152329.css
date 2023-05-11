@@ -103,7 +103,7 @@
   border: 1px solid var(--bg-color);
   outline: none;
 }
-/* .scrollbar {
+.scrollbar {
   margin-left: 30px;
   float: left;
   height: 300px;
@@ -132,7 +132,7 @@
 
 #style-3::-webkit-scrollbar-thumb {
   background-color: #000000;
-} */
+}
 
 @media only screen and (min-width: 200px) and (max-width: 900px) {
   .button {
