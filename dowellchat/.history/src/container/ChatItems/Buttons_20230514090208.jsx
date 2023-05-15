@@ -9,26 +9,11 @@ const Buttons = () => {
   const buttonStyles = (title) => {
     switch (title) {
       case "Login":
-        return {
-          backgroundColor: "#90e7b5",
-          color: "black",
-          outline: "none",
-          border: "none",
-        };
+        return { backgroundColor: "#90e7b5", color: "black" };
       case "Extension":
-        return {
-          backgroundColor: "#ff9898",
-          color: "black",
-          outline: "none",
-          border: "none",
-        };
+        return { backgroundColor: "#ff9898", color: "black" };
       case "Living-Lab-Admin":
-        return {
-          backgroundColor: "#90e7b5",
-          color: "black",
-          outline: "none",
-          border: "none",
-        };
+        return { backgroundColor: "#90e7b5", color: "black" };
       case "Sales-Agent":
         return {
           border: "1px solid #fca5a5",
@@ -60,38 +45,7 @@ const Buttons = () => {
     <div className="container-full">
       <div className=" d-flex flex-nowrap">
         <div className="d-flex flex-nowrap gap-3  text-nowrap py-3" id="scroll">
-          {productList &&
-            productList.map((title) => {
-              const { backgroundColor, color, border, outline } =
-                buttonStyles(title) ?? {};
-              return (
-                <button
-                  key={title}
-                  type="button"
-                  className="btn btn-md"
-                  style={{ backgroundColor, color, border, outline }}
-                >
-                  {title}
-                  {title === "DO-WELL-CSC" && (
-                    <span
-                      className="badge bg-primary"
-                      // style={{ padding: "0.2px 7px" }}
-                    >
-                      11
-                    </span>
-                  )}
-                </button>
-              );
-            })}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Buttons;
-{
-  /* <button type="button" className="rounded  button3">
+          <button type="button" className="rounded  button3">
             Login
           </button>
           <button type="button" className="rounded button4">
@@ -114,5 +68,11 @@ export default Buttons;
             >
               11
             </span>
-          </button> */
-}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Buttons;

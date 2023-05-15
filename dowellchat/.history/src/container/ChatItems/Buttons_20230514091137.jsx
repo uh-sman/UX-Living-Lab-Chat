@@ -68,18 +68,10 @@ const Buttons = () => {
                 <button
                   key={title}
                   type="button"
-                  className="btn btn-md"
+                  className="btn btn-sm btn-success"
                   style={{ backgroundColor, color, border, outline }}
                 >
                   {title}
-                  {title === "DO-WELL-CSC" && (
-                    <span
-                      className="badge bg-primary"
-                      // style={{ padding: "0.2px 7px" }}
-                    >
-                      11
-                    </span>
-                  )}
                 </button>
               );
             })}

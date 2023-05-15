@@ -6,40 +6,40 @@ const Buttons = () => {
   const { productList } = useContext(ProductContext) ?? {};
   console.log(productList);
 
-  const buttonStyles = (title) => {
-    switch (title) {
-      case "Login":
-        return {
-          backgroundColor: "#90e7b5",
-          color: "black",
-          outline: "none",
-          border: "none",
-        };
-      case "Extension":
-        return {
-          backgroundColor: "#ff9898",
-          color: "black",
-          outline: "none",
-          border: "none",
-        };
-      case "Living-Lab-Admin":
-        return {
-          backgroundColor: "#90e7b5",
-          color: "black",
-          outline: "none",
-          border: "none",
-        };
-      case "Sales-Agent":
-        return {
-          border: "1px solid #fca5a5",
-          color: "black",
-          backgroundColor: "transparent",
-        };
+const buttonStyles = (title) => {
+  switch (title) {
+    case "Login":
+      return {
+        backgroundColor: "#90e7b5",
+        color: "black",
+        outline: "none",
+        border: "none",
+      };
+    case "Extension":
+      return {
+        backgroundColor: "#ff9898",
+        color: "black",
+        outline: "none",
+        border: "none",
+      };
+    case "Living-Lab-Admin":
+      return {
+        backgroundColor: "#90e7b5",
+        color: "black",
+        outline: "none",
+        border: "none",
+      };
+    case "Sales-Agent":
+      return {
+        border: "1px solid #fca5a5",
+        color: "black",
+        backgroundColor: "transparent",
+      };
 
-      default:
-        return null;
-    }
-  };
+    default:
+      return null;
+  }
+};
   // {
   //   productList &&
   //     productList.map((title) => {
@@ -62,24 +62,16 @@ const Buttons = () => {
         <div className="d-flex flex-nowrap gap-3  text-nowrap py-3" id="scroll">
           {productList &&
             productList.map((title) => {
-              const { backgroundColor, color, border, outline } =
+              const { backgroundColor, color, border,out\ } =
                 buttonStyles(title) ?? {};
               return (
                 <button
                   key={title}
                   type="button"
-                  className="btn btn-md"
-                  style={{ backgroundColor, color, border, outline }}
+                  className="btn btn-sm btn-success"
+                  style={{ backgroundColor, color, border }}
                 >
                   {title}
-                  {title === "DO-WELL-CSC" && (
-                    <span
-                      className="badge bg-primary"
-                      // style={{ padding: "0.2px 7px" }}
-                    >
-                      11
-                    </span>
-                  )}
                 </button>
               );
             })}

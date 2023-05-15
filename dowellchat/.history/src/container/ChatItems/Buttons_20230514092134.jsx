@@ -68,7 +68,7 @@ const Buttons = () => {
                 <button
                   key={title}
                   type="button"
-                  className="btn btn-md"
+                  className="btn btn-lg"
                   style={{ backgroundColor, color, border, outline }}
                 >
                   {title}
