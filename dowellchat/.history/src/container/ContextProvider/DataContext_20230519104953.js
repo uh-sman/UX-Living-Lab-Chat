@@ -134,7 +134,6 @@ export const AppProvider = ({ children }) => {
         // getMessages,
         getMessage,
         setRoom_Id,
-        room_Id,
       }}
     >
       {children}

@@ -1,7 +1,6 @@
 import React from "react";
 import "./scrollbar.css";
 import Message from "./Message";
-import ReplyChat from "./ReplyChat";
 const ScrollBar = ({ message }) => {
   return (
     <div>
@@ -16,7 +15,6 @@ const ScrollBar = ({ message }) => {
           <div class="force-overflow"></div>
         </div> */}
       </div>
-      <ReplyChat />
     </div>
   );
 };

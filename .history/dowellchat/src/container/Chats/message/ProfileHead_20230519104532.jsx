@@ -9,7 +9,7 @@ import axios from "axios";
 import SearchBar from "../SearchBar";
 import ScrollBar from "./ScrollBar";
 const ProfileHead = ({ chatHeader }) => {
-  const { rooms, room_Id } = useContext(ProductContext);
+  // const { handleProductClick } = useContext(ProductContext);
   const [result, setResult] = useState([]);
 
   // const getMessages = async () => {
@@ -29,7 +29,7 @@ const ProfileHead = ({ chatHeader }) => {
   //   if (Boolean(chatHeader)) getMessages();
   // }, [chatHeader]);
   // console.log("result", result);
-  // const { rooms } = result;
+  const { rooms } = result;
   return (
     <div className=" container " style={{ gap: "2rem" }}>
       {/* <SearchBar results={result} /> */}
@@ -48,16 +48,18 @@ const ProfileHead = ({ chatHeader }) => {
               }}
             ></small>
             <div className="">
-              <h1 className="fs-5 fb-extrabold">{room_Id}</h1>
+              <h1 className="fs-5 fb-extrabold">
+                {/* {result?.rooms?.[0]?.room_id} */}
+              </h1>
               <small className="text-primary text-nowrap">Active now</small>
             </div>
           </figure>
           <ChatIcons />
         </div>
       </div>
-      <ScrollBar message={result} />
 
-      {/* <ReplyChat /> */}
+      <ReplyChat />
+      <ScrollBar message={result} />
     </div>
   );
 };

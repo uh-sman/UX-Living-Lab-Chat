@@ -5,7 +5,7 @@ const Message = ({ message }) => {
   // const [message, setMessage] = useState(true);
   const { rooms } = useContext(ProductContext);
   console.log("message", message);
-  console.log("room from message", rooms);
+  console.log("room from message", room);
   const messageUser = (message) => {
     switch (message) {
       case message:
