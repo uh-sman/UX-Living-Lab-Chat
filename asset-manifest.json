@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/UX-Living-Lab-Chat/static/css/main.1129b46a.css",
+    "main.js": "/UX-Living-Lab-Chat/static/js/main.49736581.js",
+    "static/media/doctor.png": "/UX-Living-Lab-Chat/static/media/doctor.27be5716f579ffc28e3e.png",
+    "static/media/avatar.png": "/UX-Living-Lab-Chat/static/media/avatar.2070048140bfe9e6de30.png",
+    "index.html": "/UX-Living-Lab-Chat/index.html",
+    "main.1129b46a.css.map": "/UX-Living-Lab-Chat/static/css/main.1129b46a.css.map",
+    "main.49736581.js.map": "/UX-Living-Lab-Chat/static/js/main.49736581.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1129b46a.css",
+    "static/js/main.49736581.js"
+  ]
+}
