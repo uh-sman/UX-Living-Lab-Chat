@@ -49,7 +49,11 @@ const ProfileHead = ({ chatHeader }) => {
             ></small>
             <div className="d-flex flex-column">
               <small className="fs-6 fw-extrabold">
-                {room_Id ? room_Id : <small className="fs-6 fw-bold">42</small>}
+                {room_Id ? (
+                  <small className="fs-6 fw-bold">{room_Id}</small>
+                ) : (
+                  <small className="fs-6 fw-bold">42</small>
+                )}
               </small>
               <small className="text-primary text-nowrap">Active now</small>
             </div>
@@ -58,6 +62,7 @@ const ProfileHead = ({ chatHeader }) => {
         </div>
       </div>
       <ScrollBar message={result} />
+      {/* <Message /> */}
       {/* <ReplyChat /> */}
     </div>
   );
