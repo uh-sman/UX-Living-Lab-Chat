@@ -51,8 +51,8 @@ const Message = ({ message }) => {
             style={{ display, justifyContent }}
           >
             <div className="col-md-8 col-lg-6 col-xl-4">
-              {messages ? (
-                messages?.messages?.map(({ message, id }) => {
+              {rooms ? (
+                rooms?.messages?.map(({ message, id }) => {
                   const { display, justifyContent } = messageUser ?? {};
                   return (
                     <div
@@ -103,62 +103,3 @@ const Message = ({ message }) => {
 };
 
 export default Message;
-// {
-//   room ? (
-//     <div class="" id="chat1" style={{ borderRadius: "15px" }}>
-//       <div class="card-body">
-//         <div class="d-flex flex-row justify-content-end mb-4">
-//           <div class="p-3 ms-3 style bg-primary">
-//             <p class="small mb-0">{room}</p>
-//           </div>
-//         </div>
-//         {/*  */}
-//       </div>
-//     </div>
-//   ) : (
-//     <h1>No message yet</h1>
-//   );
-// }
-// {
-//   message &&
-//     message?.messages?.map(({ message }) => {
-//       return (
-//         <div class="" id="chat1" style={{ borderRadius: "15px" }}>
-//           <div class="card-body">
-//             <div class="d-flex flex-row justify-content-end mb-4">
-//               <div class="p-3 ms-3 style bg-primary">
-//                 <p class="small mb-0">{message}</p>
-//               </div>
-//             </div>
-//             {/*  */}
-//           </div>
-//         </div>
-//       );
-//     });
-// }
-// {
-//   message &&
-//     message?.messages?.map(({ message }, user) => {
-//       const { display, justifyContent } = messageUser(message);
-//       return (
-//         <div className="card-body">
-//           <div class="d-flex flex-row justify-content-end mb-4">
-//             <div class="p-3 ms-3 style">
-//               <p class="small mb-0 bg-primary">{message}</p>
-//             </div>
-//           </div>
-//         </div>
-//       );
-//     });
-// }
-// <div
-//   className="bg-primary text-white rounded d-flex align-items-center align-self-end"
-//   style={{
-//     width: "auto",
-//     height: "40px",
-//     listStyle: "none",
-//     marginTop: "8rem",
-//   }}
-// >
-//   <li className="mx-3"></li>
-// </div>;
