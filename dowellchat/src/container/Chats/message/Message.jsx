@@ -51,8 +51,8 @@ const Message = ({ message }) => {
             style={{ display, justifyContent }}
           >
             <div className="col-md-8 col-lg-6 col-xl-4">
-              {messages ? (
-                messages?.messages?.map(({ message, id }) => {
+              {rooms ? (
+                rooms?.messages?.map(({ message, id }) => {
                   const { display, justifyContent } = messageUser ?? {};
                   return (
                     <div

@@ -3,7 +3,7 @@ import "./button.css";
 import { AppProvider } from "../ContextProvider/DataContext";
 import ProductContext from "../ContextProvider/DataContext";
 const Buttons = ({ onSetChatHeader }) => {
-  const { productList, click, setClick, setChatHeader, getMessage } =
+  const { productList, click, setClick, setChatHeader, getRooms } =
     useContext(ProductContext);
   console.log(productList);
   // const [chatHeaders, setChatHeaders] = useState("");
@@ -44,7 +44,7 @@ const Buttons = ({ onSetChatHeader }) => {
   };
   const handleClick = (title) => {
     setChatHeader(title);
-    getMessage();
+    getRooms();
   };
   return (
     <div className="">

@@ -69,7 +69,10 @@ const AboutDetails = ({ title, ux }) => {
           </div>
         </main>
       </div>
-      <div className="lh-lg " style={{ marginTop: "2rem" }}>
+      <div
+        className="lh-lg "
+        style={{ marginTop: "2rem", marginBottom: "6rem" }}
+      >
         <h5 className="fs-6 fw-bold">{ux}</h5>
         <main>
           <div className="">

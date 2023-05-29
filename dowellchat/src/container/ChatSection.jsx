@@ -3,6 +3,8 @@ import ChatHeader from "./ChatItems/ChatHeader";
 import ProfileHead from "./Chats/message/ProfileHead";
 import ReplyChat from "./Chats/message/ReplyChat";
 import SearchBar from "./Chats/SearchBar";
+import Scroll from "./Chats/rooms/Scroll";
+import ScrollBar from "./Chats/message/ScrollBar";
 
 const ChatSection = () => {
   const [chatHeader, setChatHeader] = useState("");
@@ -18,8 +20,10 @@ const ChatSection = () => {
       "
       >
         <div className="d-flex myStyle flex-column flex-md-row flex-lg-row flex-xl-row flex-xxl-row ">
-          <SearchBar chatHeader={chatHeader} />
+          {/* <SearchBar chatHeader={chatHeader} /> */}
+          <Scroll />
           <ProfileHead chatHeader={chatHeader} />
+          {/* <ScrollBar /> */}
           {/* <ProfileHead /> */}
         </div>
         <ReplyChat chatHeader={chatHeader} />

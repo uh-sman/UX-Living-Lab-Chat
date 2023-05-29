@@ -2,12 +2,14 @@ import React from "react";
 import "./scrollbar.css";
 import Message from "./Message";
 import ReplyChat from "./ReplyChat";
+import ProfileHead from "./ProfileHead";
 const ScrollBar = ({ message }) => {
   return (
     <div>
       <div id="wrappers">
         <div class="scrollbars" id="style-1">
           <div class="force-overflow">
+            {/* <ProfileHead /> */}
             <Message message={message} />
             {/* <ReplyChat /> */}
           </div>

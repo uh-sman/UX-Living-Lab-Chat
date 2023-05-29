@@ -49,7 +49,8 @@ const SearchBar = ({ results }) => {
         </form>
         <Icons />
       </div>
-      <Scroll results={results} />
+      {/* <Scroll results={results} /> */}
+      <Rooms results={results} />
     </div>
   );
 };

@@ -2,14 +2,22 @@ import React, { useContext, useEffect, useState } from "react";
 import img from "../../../assets/avatar.png";
 import ProductContext from "../../ContextProvider/DataContext";
 const Rooms = ({ results }) => {
-  const { productList, roomList, rooms, getMessage, setRoom_Id } =
-    useContext(ProductContext);
+  const {
+    productList,
+    roomList,
+    rooms,
+    getMessage,
+    setRoom_Id,
+    room_Id,
+    getRooms,
+  } = useContext(ProductContext);
   console.log("results", rooms);
   const [roomId, setRoomId] = useState();
   console.log(roomId);
   const setIds = (room_id) => {
     // setRoomId(room_id);
     setRoom_Id(room_id);
+    getRooms(room_Id);
   };
   // useEffect(() => {
   //   getMessage();

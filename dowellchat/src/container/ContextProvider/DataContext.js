@@ -35,21 +35,34 @@ export const AppProvider = ({ children }) => {
   //   }
   // };
 
-  const getMessage = async (title) => {
+  const getRooms = async (title) => {
     try {
-      const BASE_URL = `https://100096.pythonanywhere.com/room_list/Customer-Support/644f9d104baba28710c128e3/${chatHeader}`;
+      const BASE_URL = `https://100096.pythonanywhere.com/room_list/${chatHeader}/644f9d104baba28710c128e3/`;
       const res = await axios.get(BASE_URL);
 
-      console.log(`res.data from messages${chatHeader}`, res?.data?.messages);
+      // console.log(`res.data from messages${chatHeader}`, res?.data?.messages);
+      console.log(`res.data from messages${chatHeader}`, res?.data);
       setRooms(res?.data);
+      // setMessages(res)
       // setRoom(res?.data);
     } catch (error) {
       console.error("error", error);
     }
   };
+  // const getMessage = async (room_Id) => {
+  //   try {
+  //     const BASE_URL = `https://100096.pythonanywhere.com/room_list/${chatHeader}/644f9d104baba28710c128e3/`;
+  //     const res = await axios.get(BASE_URL);
+
+  //     console.log(`res.data from messages${chatHeader}`, res?.data?.messages);
+  //     setRooms(res?.data);
+  //     // setRoom(res?.data);
+  //   } catch (error) {
+  //     console.error("error", error);
+  //   }
+  // };
   useEffect(() => {
-    const BASE_URL =
-      "https://100096.pythonanywhere.com/room_list/Customer-Support/644f9d104baba28710c128e3";
+    const BASE_URL = `https://100096.pythonanywhere.com/room_list/Login/644f9d104baba28710c128e3`;
     const getRooms = async () => {
       const res = await axios.get(BASE_URL);
       console.log(res);
@@ -142,6 +155,7 @@ export const AppProvider = ({ children }) => {
       console.log(error.message);
     }
   };
+
   useEffect(() => {
     const getSentMessages = async () => {
       try {
@@ -175,13 +189,14 @@ export const AppProvider = ({ children }) => {
         rooms,
         setRooms,
         room,
-        getMessage,
+        // getMessage,
         setRoom_Id,
         room_Id,
         userInfo,
         handleSendMessage,
         getMessages,
         setData,
+        getRooms,
       }}
     >
       {children}
